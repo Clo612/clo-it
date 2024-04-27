@@ -3,44 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
+    <title>Clo IT: Navigate the Digital Realm</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file for styling -->
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #0078D4;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Hero Section Styles */
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            background-color: #0078D4;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #005a9e;
+        }
+
+        /* Main Sections Styles */
+        section {
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
     <header>
+        <div class="logo">
+            <img src="logo.png" alt="TechVoyage Logo">
+        </div>
         <nav>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <div id="content">
-        <!-- Content will be dynamically loaded here -->
-    </div>
 
-    <script>
-        // Define a function to load content based on the URL
-        function loadContent() {
-            var path = window.location.pathname;
-            if (path === "/") {
-                // Load home page content
-                document.getElementById("content").innerHTML = "<h1>Welcome to the Home Page</h1>";
-            } else if (path === "/about") {
-                // Load about page content
-                document.getElementById("content").innerHTML = "<h1>About Us</h1>";
-            } else if (path === "/contact") {
-                // Load contact page content
-                document.getElementById("content").innerHTML = "<h1>Contact Us</h1>";
-            } else {
-                // Handle 404: Redirect to home page
-                window.location.href = "/";
-            }
-        }
+    <section id="home" class="hero">
+        <h1>Welcome to TechVoyage</h1>
+        <p>Navigate the digital realm with our cutting-edge technology solutions.</p>
+        <a href="#products" class="btn">Explore Now</a>
+    </section>
 
-        // Call loadContent function when the page loads and on navigation events
-        window.onload = loadContent;
-        window.onpopstate = loadContent;
-    </script>
+    <section id="products">
+        <h2>Our Products</h2>
+        <div class="product-grid">
+            <!-- Product Cards with images and descriptions -->
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Our Services</h2>
+        <div class="services">
+            <!-- Service Cards with descriptions -->
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <div class="about-content">
+            <!-- About Us content including team photos, narrative, and testimonials -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-form">
+            <!-- Contact Form -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 TechVoyage. All rights reserved.</p>
+    </footer>
 </body>
 </html>
