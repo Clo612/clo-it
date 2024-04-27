@@ -3,18 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clo IT - JavaScript Scripting Services</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Your Website</title>
 </head>
 <body>
-    <!-- Your HTML content here -->
     <header>
-        <div class="container">
-            <img src="logo.png" alt="Clo IT Logo">
-            <h1>Clo IT</h1>
-            <p>JavaScript Scripting Services</p>
-        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    <!-- Rest of your HTML content -->
+    <div id="content">
+        <!-- Content will be dynamically loaded here -->
+    </div>
+
+    <script>
+        // Define a function to load content based on the URL
+        function loadContent() {
+            var path = window.location.pathname;
+            if (path === "/") {
+                // Load home page content
+                document.getElementById("content").innerHTML = "<h1>Welcome to the Home Page</h1>";
+            } else if (path === "/about") {
+                // Load about page content
+                document.getElementById("content").innerHTML = "<h1>About Us</h1>";
+            } else if (path === "/contact") {
+                // Load contact page content
+                document.getElementById("content").innerHTML = "<h1>Contact Us</h1>";
+            } else {
+                // Handle 404: Redirect to home page
+                window.location.href = "/";
+            }
+        }
+
+        // Call loadContent function when the page loads and on navigation events
+        window.onload = loadContent;
+        window.onpopstate = loadContent;
+    </script>
 </body>
 </html>
