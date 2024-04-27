@@ -11,16 +11,25 @@
         <div class="container">
             <img src="logo.png" alt="Clo IT Logo">
             <h1>Clo IT</h1>
-            <p>Custom PC builds</p>
-            <p>Bash Scripting<p>
-            <p>Server Soulutions</p>
+            <p>JavaScript Scripting Services</p>
         </div>
     </header>
     <section class="services">
         <div class="container">
             <h2>Our Services</h2>
-            <p>At Clo IT, we specialize in providing high-quality Bash scripting, Custom PC Builds, And Server Soulutions, services for your business needs.</p>
-            <button id="contact-btn">Contact Us</button>
+            <p>At Clo IT, we specialize in providing high-quality JavaScript scripting services for your business needs.</p>
+            <a href="#contact" class="btn">Contact Us</a>
+        </div>
+    </section>
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="submit.php" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
     </section>
     <footer>
