@@ -1,45 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clo IT: Navigate the Digital Realm</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file for styling -->
-    <link rel="icon" type="image/x-icon" href="favicon.ico"> <!-- Link to your favicon.ico file -->
-</head>
-<body>
-    <header>
-        <div class="container">
-            <div class="logo">
-                <img src="logo.png" alt="Clo IT Logo">
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html#home">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+// script.js
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to load content dynamically
+    function loadContent(url) {
+        fetch(url)
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector("section").innerHTML = data;
+            })
+            .catch(error => console.error("Error:", error));
+    }
 
-    <section id="home" class="hero">
-        <div class="container">
-            <h1>Welcome to Clo IT</h1>
-            <p>Navigate the digital realm with our cutting-edge technology solutions.</p>
-            <a href="products.html" class="btn">Explore Now</a>
-        </div>
-    </section>
+    // Check if hash exists in URL
+    if (window.location.hash) {
+        // Load content based on hash
+        loadContent(window.location.hash.substring(1) + ".html");
+    }
 
-    <!-- Content will be loaded dynamically here -->
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Clo IT. All rights reserved.</p>
-        </div>
-    </footer>
-    
-    <script src="script.js"></script> <!-- Link to your JavaScript file -->
-</body>
-</html>
+    // Event listener for navigation links
+    document.querySelectorAll("nav a").forEach(link => {
+        link.addEventListener("click", function(event) {
+            event.preventDefault();
+            // Load content based on href attribute of clicked link
+            loadContent(this.getAttribute("href"));
+            // Update URL hash
+            window.location.hash = this.getAttribute("href").substring(1);
+        });
+    });
+});
