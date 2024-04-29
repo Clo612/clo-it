@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Clo IT</title>
+    <style>
+        /* Reset CSS */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Add your CSS styles here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        #services {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        #services h2 {
+            font-size: 3em;
+            margin-bottom: 60px;
+        }
+
+        .service {
+            margin-bottom: 40px;
+        }
+
+        .service h3 {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .service p {
+            font-size: 1.2em;
+        }
+
+        /* Image Animation */
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            margin: 20px;
+        }
+
+        .moving-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: transform 0.5s ease;
+        }
+
+        .moving-image:hover {
+            transform: translate(-10px, -10px);
+        }
+    </style>
+    <link rel="icon" type="image/x-icon" href="favicon.ico"> <!-- Link to your favicon.ico file -->
+</head>
+<body>
+    <section id="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service">
+                <h3>Custom PC Builds</h3>
+                <p>We specialize in creating custom-built PCs tailored to your specific needs and preferences. We will try to get you any parts, or your money back (Some Exclusions)</p>
+            </div>
+            <div class="service">
+                <h3>Software Development</h3>
+                <p>Our expert team can develop bespoke software solutions to address your business challenges.</p>
+            </div>
+            <div class="service">
+                <h3>IT Consulting</h3>
+                <p>Get professional advice and guidance on all aspects of IT infrastructure and strategy.</p>
+            </div>
+            <!-- Add more services as needed -->
+        </div>
+    </section>
+</body>
+</html>
